@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img { height: 15rem; }
+        sup { color: red; }
+        form, ul { display: flex; gap: 1rem; padding: 1rem; border: 0.1rem solid #000; }
+        form { flex-direction: column; width: fit-content; }
+        #pet-list { flex-wrap: wrap; list-style: none; }
+        .required {color: red;
+        margin: left 2px;}
+      </style>
+</head>
+<body>
+
+    <main>
+    <h1>Pet Tracker</h1>
+    <form id = 'form'>
+        <h2>Add a new pet!</h2>
+        <label for="petName">Pet Name:<span class = 'required'>*</span>
+            <input type="text" id="petName" name="petName" required>
+        </label>
+
+        <label>Profile Picture<span class = 'required'>*</span>
+            <input type="text" id="profilePic" name="profilePic"
+            placeholder="Picture URL" required>
+        </label>
+
+        <fieldset>
+            <legend>Species<span class = 'required'>*</span></legend>
+            <input type="radio" id="animal" name="animal"
+            value="cat" required/>
+            <label for="cat">Cat</label>
+            <br>
+
+            <input type="radio" id="animal" name="animal"
+            value="dog"/>
+            <label for="dog">Dog</label>
+            <br>
+
+            <input type="radio" id="animal" name="animal"
+            value="bird"/>
+            <label for="bird">Bird</label>
+        </fieldset>
+
+    
+
+        <div>
+            <input type="checkbox" id="friendly" name="friendly">
+            <label for="friendly">Are They Friendly?</label>
+        </div>
+
+        
+        <input type="submit" value ="Add Pet!" > 
+    </form>
+</main>
+
+<section class="petListContainer">
+    <h2>Pet List</h2>
+    <div id="cardContainer"></div>
+
+
+</section>
+<script type ='module' src="./index.js"></script>
+</body>
+</html>
